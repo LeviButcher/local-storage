@@ -4,9 +4,10 @@ let videoCount = localStorage.getItem('videoCount') || 0;
 
 function makeVideoHTML(video) {
     return `
-      <div>
+      <div class='video-card'>
         <img src='${video['picture-url']}' alt='picture'/>
-        <h4>${video['video-name']} <span>${video.rating}</span></h4>
+        <h4>${video['video-name']}</h4>
+        <h4>${video.rating}</h4>
       </div>
     `;
 }
