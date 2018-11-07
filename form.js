@@ -1,4 +1,5 @@
 const form = document.querySelector('.video-form');
+const annouce = document.querySelector('#annouce');
 
 let videoCount = localStorage.getItem('videoCount') || 0;
 
@@ -18,6 +19,7 @@ form.addEventListener('submit', (e) => {
     console.log(videoCount);
     console.log(video);
     addVideo(video);
+    annouce.innerText = `Successfully added Video: ${video['video-name']}`;
     form.reset();
 });
 

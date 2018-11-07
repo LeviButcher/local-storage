@@ -6,8 +6,10 @@ function makeVideoHTML(video) {
     return `
       <div class='video-card'>
         <img src='${video['picture-url']}' alt='picture'/>
-        <h4>${video['video-name']}</h4>
-        <h4>${video.rating}</h4>
+        <div>
+          <h4 title='${video['video-name']}'>${video['video-name']}</h4>
+          <h4>${video.rating}</h4>
+        </div>
       </div>
     `;
 }
@@ -19,7 +21,12 @@ function populateVideoList(videos) {
 
 document.onload = () => {
   let videos = getVideos();
-  populateVideoList(videos);
+  if(videos.length > 0) {
+    populateVideoList(videos);
+  }
+  else {
+    videoContainer.innerHTML = `<h1 class='page-header'>You have no videos saved</h1>`
+  }
 }
 
 document.onload();

@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Submit Video</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -15,23 +17,38 @@
     </header>
     <main class="container">
       <section>
-        <header>
-            <h1>Enter a new Video</h1>
-        </header>
         <form class="video-form">
-            <input type="text" name="video-name" placeholder="Video Name">
-            <div class="">
-              <label for="rating1">Everyone</label>
-              <input id="rating1" type="radio" name="rating" value="E">
-              <label for="rating2">Teen</label>
-              <input id="rating2" type="radio" name="rating" value="T">
-              <label for="rating3">Mature</label>
-              <input id="rating3" type="radio" name="rating" value="M">
-              <label for="rating4">Adult</label>
-              <input id="rating4" type="radio" name="rating" value="A">
-            </div>
-            <input type="text" name="picture-url" placeholder="Picture-URL">
-            <input type="submit" value="Submit">
+            <header class="page-header">
+                <h1>Enter a New Video</h1>
+            </header>
+            <section>
+              <div>
+                <label id="annouce"><label/>
+              </div>
+              <label for="video-name">Video Name</label>
+              <input id="video-name" type="text" name="video-name" placeholder="Video Name">
+              <div class="rating-container">
+                <div class="">
+                  <label for="rating1">Everyone</label>
+                  <input id="rating1" type="radio" name="rating" value="E">
+                </div>
+                <div class="">
+                  <label for="rating2">Teen</label>
+                  <input id="rating2" type="radio" name="rating" value="T">
+                </div>
+                <div class="">
+                  <label for="rating3">Mature</label>
+                  <input id="rating3" type="radio" name="rating" value="M">
+                </div>
+                <div class="">
+                  <label for="rating4">Adult</label>
+                  <input id="rating4" type="radio" name="rating" value="A">
+                </div>
+              </div>
+              <label for="picture-url">Picture URL</label>
+              <input type="text" id="picture-url" name="picture-url" placeholder="Picture-URL">
+              <input type="submit" value="Submit">
+            </section>
         </form>
       </section>
     </main>
